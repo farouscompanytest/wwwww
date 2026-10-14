@@ -315,6 +315,9 @@ body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 </style>
 <style>img.zoomable{cursor:zoom-in}.proj-card{cursor:zoom-in}</style>
 <style>.hb-layer{opacity:0;transition:opacity 1.2s ease}.hb-layer.on{opacity:1}</style>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 
 <style>.nav-brand img,.footer-brand img{background:#fff;border-radius:8px;padding:2px}</style>
@@ -858,7 +861,9 @@ document.addEventListener('keydown', e => {
   };
   vids.forEach((v, i) => {
     v.muted = true;
-    v.addEventListener('ended', () => { if (i < vids.length - 1) play(i + 1); else { show(img); setTimeout(() => play(0), 3500); } });
+    const next = () => { if (i < vids.length - 1) play(i + 1); else { show(img); setTimeout(() => play(0), 3500); } };
+    v.addEventListener('ended', next);
+    v.addEventListener('error', () => { console.warn('Hero video failed to load:', v.getAttribute('src')); next(); });
   });
   setTimeout(() => play(0), 3500);
   const kick = () => { const a = vids.find(v => v.classList.contains('on')); if (a && a.paused && !a.ended) a.play().catch(() => {}); };
