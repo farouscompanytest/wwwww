@@ -371,6 +371,43 @@ body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  #toast{font-size:12px}
 }
 </style>
+<style>
+/* Mobile hero refinement */
+@media(max-width:600px){
+ #hero{min-height:auto;padding:104px 0 56px;align-items:flex-start}
+ .hero-left{text-align:center}
+ .hero-title{margin-bottom:16px;overflow-wrap:normal!important;word-break:normal}
+ .hero-t1{font-size:clamp(38px,12vw,48px)!important;font-weight:800;letter-spacing:.06em;line-height:1.1}
+ [dir=rtl] .hero-t1{letter-spacing:0;line-height:1.3}
+ .hero-t2{font-size:clamp(12px,3.7vw,15px)!important;font-weight:600;letter-spacing:.14em;line-height:1.6;margin-top:10px;color:var(--gold)!important;-webkit-text-fill-color:var(--gold)!important;text-shadow:none;text-wrap:balance;overflow-wrap:normal}
+ [dir=rtl] .hero-t2{letter-spacing:0;font-size:clamp(14px,4.2vw,17px)!important}
+ .hero-sub{font-size:13px!important;line-height:1.75;max-width:320px;margin:0 auto 24px}
+ .hero-cta{justify-content:center!important;gap:10px}
+ .btn-primary,.btn-ghost{font-size:12.5px;padding:11px 22px}
+ #hero-stats-section{padding:36px 5vw 0!important}
+ .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:0;padding-top:20px}
+ .hero-stat{padding:14px 8px}
+ .hero-stat:nth-child(2)::after,.hero-stat:nth-child(4)::after{display:none}
+ .hero-stat:nth-child(-n+2){border-bottom:1px solid var(--border2)}
+ .hero-stat .num{font-size:28px}
+ .hero-stat .lbl{font-size:10.5px!important;margin-top:6px}
+}
+</style>
+<style>
+/* Mobile hero: centered, wide, not tall */
+@media(max-width:600px){
+ #hero{padding:96px 6vw 48px!important;align-items:center!important;justify-content:center}
+ .hero-grid{display:block!important;width:100%;text-align:center}
+ .hero-left,[dir=rtl] .hero-left{text-align:center!important;width:100%}
+ .hero-title{text-align:center;width:100%}
+ .hero-t1,.hero-t2{display:block;text-align:center}
+ .hero-t2{white-space:nowrap;font-size:3.8vw!important;letter-spacing:.12em;text-wrap:nowrap}
+ [dir=rtl] .hero-t2{font-size:4.6vw!important;letter-spacing:0}
+ .hero-sub{max-width:100%!important;width:100%;margin:0 auto 22px!important;text-align:center!important;font-size:13px!important;line-height:1.7;text-wrap:pretty}
+ .hero-cta{display:flex;justify-content:center!important;flex-wrap:nowrap;gap:10px;width:100%}
+ .hero-cta .btn-primary,.hero-cta .btn-ghost{flex:1;text-align:center;padding:11px 10px;white-space:nowrap}
+}
+</style>
 </head>
 
 <style>.nav-brand img,.footer-brand img{background:#fff;border-radius:8px;padding:2px}</style>
