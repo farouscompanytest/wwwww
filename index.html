@@ -318,6 +318,59 @@ body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* Mobile font-size reduction */
+@media(max-width:600px){
+ section{padding:64px 5vw}
+ .hero-title{font-size:clamp(24px,7.5vw,32px)!important;line-height:1.2}
+ [dir=rtl] .hero-title{line-height:1.45}
+ .hero-t2{font-size:.6em}
+ .hero-sub{font-size:13.5px!important;line-height:1.7;margin-bottom:26px}
+ .hero-meta{font-size:10.5px}
+ .hero-badge{font-size:9.5px;padding:6px 14px;margin-bottom:22px}
+ .hero-stat .num{font-size:clamp(24px,7vw,30px)}
+ .hero-stat .lbl{font-size:10.5px!important}
+ .btn-primary,.btn-ghost{font-size:12.5px;padding:12px 24px}
+ .section-title{font-size:clamp(21px,6.2vw,26px)!important;line-height:1.25}
+ [dir=rtl] .section-title{line-height:1.5}
+ .section-sub,.about-text p{font-size:13.5px!important;line-height:1.7;margin-bottom:32px}
+ .about-text p{margin-bottom:14px}
+ .eyebrow{font-size:10px!important;letter-spacing:.12em;margin-bottom:12px}
+ .eyebrow::before{width:22px}
+ .holo-card h3{font-size:15.5px}
+ .holo-card p,.why-card .t{font-size:13px!important;line-height:1.65}
+ .holo-card .ic{width:44px;height:44px;font-size:20px;margin-bottom:14px}
+ .about-statement p{font-size:14px!important;line-height:1.7}
+ .pillar .t{font-size:12.5px!important}
+ .pillar .ic{font-size:22px}
+ .proj-title,.gal-cap .t1{font-size:13.5px!important}
+ .proj-loc,.proj-count,.gal-cap .t2{font-size:10px!important}
+ .about-badge .l1{font-size:10px!important}
+ .about-badge .l2{font-size:12.5px!important}
+ .why-card .num{font-size:26px}
+ .legal-item .lbl,.legal-item .val{font-size:12.5px!important}
+ .legal-hq .l1{font-size:9.5px}
+ .legal-hq .l2{font-size:13px!important}
+ .c-card .l1{font-size:10px!important}
+ .c-card .l2{font-size:13px!important}
+ .c-card .ic{font-size:20px}
+ .quote-box h3{font-size:18px}
+ .quote-box .qs{font-size:12.5px}
+ .q-in{font-size:16px} /* keep 16px so iOS doesn't zoom on focus */
+ .eq-count{font-size:11px}
+ .copyright{font-size:10.5px!important}
+ .footer-brand span{font-size:11.5px!important}
+ #clients .tile-tap,#equipment .tile-tap{font-size:12.5px!important}
+ section [style*="font-size:14px"]{font-size:12.5px!important;padding:12px 14px!important}
+ .nav-brand .n1{font-size:13px}
+ .nav-brand img{height:40px;width:40px}
+ .lang-btn{height:38px;font-size:12.5px}
+ .burger{width:38px;height:38px;font-size:19px}
+ #mnav{top:68px}
+ #mnav a{font-size:14px;padding:12px 14px}
+ #toast{font-size:12px}
+}
+</style>
 </head>
 
 <style>.nav-brand img,.footer-brand img{background:#fff;border-radius:8px;padding:2px}</style>
